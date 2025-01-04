@@ -26,12 +26,12 @@ if (!$product) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Collect data from the form
-    $category_id = $_POST['category_id'];
-    $product_name = $_POST['product_name'];
-    $description = $_POST['description'];
-    $price = $_POST['price'];
-    $stock = $_POST['stock'];
+    // Collect data from the form and sanitize
+    $category_id = mysqli_real_escape_string($conn, $_POST['category_id']);
+    $product_name = mysqli_real_escape_string($conn, $_POST['product_name']);
+    $description = mysqli_real_escape_string($conn, $_POST['description']);
+    $price = mysqli_real_escape_string($conn, $_POST['price']);
+    $stock = mysqli_real_escape_string($conn, $_POST['stock']);
 
     // Handle image upload (optional, only if the image is being changed)
     if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
@@ -71,6 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['error'] = "Error: " . mysqli_error($conn);
     }
 }
+
 
 ?>
 

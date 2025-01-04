@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $update_query = "UPDATE users SET first_name = '$first_name', last_name = '$last_name', contact = '$contact_number', address = '$address', email = '$email' $password_query WHERE user_id = '$user_id'";
 
     if ($conn->query($update_query) === TRUE) {
-        $alert_message = "Information updated successfully!";
+        echo "<script>alert('Information updated successfully!');</script>";
     } else {
         $alert_message = "Error updating information. Please try again.";
     }
@@ -58,7 +58,7 @@ $conn->close();
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<s>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="description" content="" />
@@ -69,14 +69,19 @@ $conn->close();
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/design.css">
-</head>
+  <style>
+    body{
+      background: white;
+    }
+  </style>
+</s>
 
 <body>
 
   <?php include('navbar.php'); ?>
 
   <!-- Header-->
-  <header class="py-5" style="background: #361500;">
+  <header class="py-5" style="background: #3B3030;">
     <div class="container px-4 px-lg-5 my-5">
       <div class="text-center text-white">
         <h1 class="display-4 fw-bolder">Your Profile</h1>
@@ -86,15 +91,15 @@ $conn->close();
   </header>
 
   <!-- Profile Form Section -->
-  <section class="py-5" style="background-color: #1C0A00;">
+  <section class="py-5" style="background-color: white;">
     <div class="container px-8 px-lg-5">
       <div class="row justify-content-center">
         <div class="col-lg-12">
           <div class="card shadow-lg border-0 rounded-lg">
-            <div class="card-header text-center text-white" style="background-color: #1C0A00;">
+            <div class="card-header text-center text-dark" style="background-color: white;">
               <h3>Update Your Information</h3>
             </div>
-            <div class="card-body text-white" style="background-color: #1C0A00;">
+            <div class="card-body text-dark" style="background-color: white;">
               <form method="POST" action="profile.php">
                 <div class="row mb-3">
                   <div class="col-md-6">

@@ -1,18 +1,8 @@
-<style>
-    ul li a{
-        border-radius: 10px;
-    }
-    ul li a:hover{
-        border-radius: 10px;
-        background: #AB886D;
-    }
-</style>
-
 <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg" style="background: #603601;">
+        <nav class="navbar navbar-expand-lg" style="background: #3B3030;">
             <div class="container px-4 px-lg-5">
                 <!-- Logo and Brand -->
-                <a class="navbar-brand text-light" href="index.php">Julie's</a>
+                <a class="navbar-brand text-light" href="index.php">Coffee PH</a>
         
                 <!-- Toggler button for mobile view -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -25,18 +15,6 @@
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link text-light" aria-current="page" href="index.php">Home</a></li>
                         <li class="nav-item"><a class="nav-link text-light" href="about.php">About</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light" id="navbarDropdown" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="index.php#menu">All Products</a></li>
-                                <li>
-                                    <hr class="dropdown-divider" />
-                                </li>
-                                <li><a class="dropdown-item" href="index.php#pastries">Pastries</a></li>
-                                <li><a class="dropdown-item" href="index.php#cakes">Cakes</a></li>
-                            </ul>
-                        </li>
                         <li class="nav-item"><a class="nav-link text-light" href="order_history.php">Order History</a></li>
                     </ul>
                     &nbsp;

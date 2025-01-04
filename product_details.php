@@ -1,13 +1,9 @@
 <?php
-// Start the session
 session_start();
 
-// Include the database connection
 include('connection.php');
 
-// Check if the user is logged in
-if (!isset($_SESSION['user_id'])) {
-    // Redirect to login page if the user is not logged in
+if (!isset($_SESSION['user_id']) || $_SESSION['account_type'] != 2) {
     header("Location: login.php");
     exit;
 }
@@ -77,47 +73,76 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['quantity'])) {
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/design.css">
+    <style>
+        body {
+            background-color: white;
+            color: black;
+        }
+
+        .product-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 3px 4px 5px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn-custom {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+        }
+
+        .btn-custom:hover {
+            background-color: #2B2525;
+        }
+
+        h1, .small {
+            color: #3B3030;
+        }
+
+        .form-control {
+            border-color: #3B3030;
+        }
+    </style>
 </head>
 
 <body>
 
-  <?php include('navbar.php'); ?>
+<?php include('navbar.php'); ?>
 
-  <section class="py-5" style="background-color: #1C0A00;">
-    <section class="py-5">
-      <div class="container px-4 px-lg-5 my-5">
+<section class="py-5">
+    <div class="container px-4 px-lg-5 my-5 product-container">
         <div class="row gx-4 gx-lg-5 align-items-center">
-          <!-- Product Image -->
-          <div class="col-md-6">
-            <img class="card-img-top mb-5 mb-md-0" src="uploads/<?php echo htmlspecialchars($product['image']); ?>" alt="Product Image" style="height: 400px; object-fit: cover;" />
-          </div>
-
-          <!-- Product Details -->
-          <div class="col-md-6">
-            <div class="small mb-1" style="color: #FB773C;">Category: <?php echo htmlspecialchars($product['category_name']); ?></div>
-            <h1 class="display-5 fw-bolder" style="color: #FB773C;"><?php echo htmlspecialchars($product['product_name']); ?></h1>
-            <div class="fs-5 mb-5">
-              <span class="text-light">$<?php echo number_format($product['price'], 2); ?></span>
+            <!-- Product Image -->
+            <div class="col-md-6">
+                <img class="card-img-top mb-5 mb-md-0" src="uploads/<?php echo htmlspecialchars($product['image']); ?>" alt="Product Image" style="height: 400px; object-fit: cover;" />
             </div>
-            <p class="lead text-light"><?php echo nl2br(htmlspecialchars($product['description'])); ?></p>
-            <form action="product_details.php?id=<?php echo $product_id; ?>" method="POST">
-                <div class="d-flex flex-column">
-                  <input class="form-control text-center me-3" id="inputQuantity" name="quantity" type="number" value="1" style="max-width: 3rem" />
-                  <br>
-                  <div class="d-flex justify-content-center">
-                    <button class="btn btn-primary text-white flex-shrink-0 col-md-6" type="submit">
-                    <i class="bi-cart-fill me-1 text-white"></i> Add to cart
-                  </button>
-                  </div> 
-                </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-  </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/scripts.js"></script>
+            <!-- Product Details -->
+            <div class="col-md-6">
+                <div class="small mb-1">Category: <?php echo htmlspecialchars($product['category_name']); ?></div>
+                <h1 class="display-5 fw-bolder"><?php echo htmlspecialchars($product['product_name']); ?></h1>
+                <div class="fs-5 mb-5">
+                    <span>$<?php echo number_format($product['price'], 2); ?></span>
+                </div>
+                <p class="lead"><?php echo nl2br(htmlspecialchars($product['description'])); ?></p>
+                <form action="product_details.php?id=<?php echo $product_id; ?>" method="POST">
+                    <div class="d-flex flex-column">
+                        <input class="form-control text-center me-3" id="inputQuantity" name="quantity" type="number" value="1" style="max-width: 3rem" />
+                        <br>
+                        <div class="d-flex justify-content-center">
+                            <button class="btn btn-custom text-white flex-shrink-0 col-md-6" type="submit">
+                                <i class="bi bi-cart-fill me-1"></i> Add to cart
+                            </button>
+                        </div> 
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/scripts.js"></script>
 </body>
 </html>

@@ -1,10 +1,10 @@
   <style>
     .sidebar{
-        background: #1C0A00;
+        background: #3B3030;
     }
 
     .collapse-item:hover {
-        background-color: #6f4f28 !important;
+        background-color:rgb(83, 69, 69) !important;
         color: white !important;
     }
   </style>
@@ -14,10 +14,7 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink" style="color: #FB773C;"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3" style="color: #FB773C;">Julie's <sup>ADMIN</sup></div>
+                <div class="sidebar-brand-text mx-3" style="color: white;">Coffee PH <sup>ADMIN</sup></div>
             </a>
 
             <!-- Divider -->
@@ -46,7 +43,7 @@
                     <span>Manage Products</span>
                 </a>
                 <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="py-2 collapse-inner rounded text-light" style="background: #493628;">
+                    <div class="py-2 collapse-inner rounded text-light" style="background: #3B3030;">
                         <a class="collapse-item text-light" href="products.php">View Products</a>
                         <a class="collapse-item text-light" href="category.php">View Categories</a>
                     </div>
@@ -69,8 +66,8 @@
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Manage Transactions</span>
                 </a>
-                <div id="collapseTransactions" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar" style="background: #1C0A00;">
-                    <div class="py-2 collapse-inner rounded" style="background: #493628;">
+                <div id="collapseTransactions" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar" style="background: #3B3030;">
+                    <div class="py-2 collapse-inner rounded" style="background: #3B3030;">
                         <a class="collapse-item text-light" href="pending_orders.php">Pending Orders</a>
                         <a class="collapse-item text-light" href="completed_orders.php">Completed Orders</a>
                         <a class="collapse-item text-light" href="cancelled_orders.php">Cancelled Orders</a>
@@ -94,7 +91,7 @@
                     <span>Manage Accounts</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="py-2 collapse-inner rounded" style="background: #493628;">
+                    <div class="py-2 collapse-inner rounded" style="background: #3B3030;">
                         <a class="collapse-item text-light" href="customer_account.php">Customer Accounts</a>
                         <a class="collapse-item text-light" href="admin_account.php">Admin Accounts</a>
                     </div>

@@ -94,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <?php include('navbar.php'); ?>
 
-    <header class="py-5" style="background: #361500;">
+    <header class="py-5" style="background:  #3B3030;">
         <div class="container px-4 px-lg-5 my-5">
             <div class="text-center text-white">
                 <h1 class="display-4 fw-bolder">Your Shopping Cart</h1>
@@ -103,16 +103,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </header>
 
-    <section class="py-5" style="background-color: #1C0A00;">
+    <section class="py-5" style="background-color: white;">
         <section class="container my-5">
             <div class="row">
                 <!-- Shopping Cart Table -->
                 <div class="col-lg-8">
-                    <div class="card">
-                        <div class="card-header bg-dark text-white">
-                            <h5 class="card-title">Your Cart</h5>
+                    <div class="card shadow">
+                        <div class="card-header text-white" style="background:  #3B3030;">
+                            <h5 class="card-title text-center">Your Cart</h5>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body shadow">
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
@@ -151,7 +151,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <!-- Summary Section -->
                 <div class="col-lg-4">
                     <div class="card">
-                        <div class="card-header bg-dark text-white">
+                        <div class="card-header text-white" style="background: #3B3030;">
                             <h5 class="card-title">Order Summary</h5>
                         </div>
                         <div class="card-body">

@@ -15,10 +15,9 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom CSS for Ice Cream Shop theme -->
   <style>
-    /* Custom Ice Cream Shop theme */
     body {
       font-family: 'Roboto', sans-serif;
-      background: linear-gradient(to right, #D8B49A, #F2D0A6, #E3C29E, #E8D4B6);
+      background:  white;
       height: 100vh;
       margin: 0;
       display: flex;
@@ -26,17 +25,16 @@
       align-items: center;
     }
 
-    h1,
-    h2 {
-      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: white;
+    h1 {
+      font-family: 'Roboto', sans-serif;
+      color: #D9A877;
     }
 
     .form-control {
       border-radius: 50px;
       padding: 10px;
       font-size: 1rem;
-      border: 1px solid #f1c6a4;
+      border: 1px solid #D9A877;
     }
 
     .form-outline {
@@ -44,7 +42,7 @@
     }
 
     .btn-primary {
-      background-color: #6C4E31;
+      background-color: #6B4226;
       border-radius: 50px;
       font-size: 1.2rem;
       padding: 10px 20px;
@@ -53,29 +51,25 @@
     }
 
     .btn-primary:hover {
-      background-color: #603F26;
-    }
-
-    .form-check-label {
-      color: white;
-    }
-
-    .form-check-input {
-      border-radius: 50%;
+      background-color: #5A371F;
     }
 
     .login-form-container {
       border-radius: 15px;
-      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
       margin: 0 15px;
-      background: #1C0A00;
+      background: #3B3030;
       padding: 30px;
       width: 100%;
       max-width: 500px;
     }
 
+    .form-label {
+      color: #D9A877;
+    }
+
     .forgot-password-link {
-      color: white;
+      color: #D9A877;
     }
 
     .forgot-password-link:hover {
@@ -88,10 +82,10 @@
 
   <!-- Login Form -->
   <div class="login-form-container">
-    <h1 class="text-center">Login to Julie's</h1>
+    <h1 class="text-center" style="color: #D9A877;">Login to Coffee PH</h1>
     <br>
     <div class="col text-center text-light">
-      Don't have an account? <a href="signup.php" class="forgot-password-link" style="color: #FB773C;">Sign Up</a>
+      Don't have an account? <a href="signup.php" class="forgot-password-link" style="color: #D9A877;">Sign Up</a>
     </div>
     <br>
     <form action="auth_login.php" method="POST">
@@ -111,7 +105,7 @@
       <div class="row mb-4">
         <div class="col d-flex justify-content-start">
           <div class="form-check" >
-            <a href="forgot_password.php" style="color: #FB773C;">Forgot password?</a>
+            <a href="forgot_password.php" style="color: #D9A877;">Forgot password?</a>
           </div>
         </div>
       </div>

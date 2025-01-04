@@ -52,7 +52,7 @@ if (isset($_GET['id'])) {
 
         if (mysqli_query($conn, $update_sql)) {
             // Redirect to the pending orders page after successful update
-            echo "<script>alert('Transaction updated successfully!'); window.location.href='completed.php';</script>";
+            echo "<script>alert('Transaction updated successfully!'); window.location.href='edit_transaction.php';</script>";
             exit;
         } else {
             echo "Error updating transaction: " . mysqli_error($conn);

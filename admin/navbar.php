@@ -1,6 +1,6 @@
 <style>
     .navbar{
-        background: #1C0A00;
+        background: #3B3030;
     }
 </style>
                 <nav class="navbar navbar-expand topbar mb-4 static-top shadow">
